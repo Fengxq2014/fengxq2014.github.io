@@ -7,19 +7,19 @@ categories: 杂项
 
 本文整理自网络，所有代码都经过V8 5.2.361.49测试，不定时更新
 <!-- more -->
-# 首次为变量赋值时务必使用var关键字
+## 首次为变量赋值时务必使用var关键字
 变量没有声明而直接赋值得话，默认会作为一个新的全局变量，要尽量避免使用全局变量。
-# 使用`===` 代替` ==`
+## 使用`===` 代替` ==`
 `==`和`!=`操作符会在需要的情况下自动转换数据类型。但`===`和`!==`不会，它们会同时比较值和数据类型，这也使得它们要比`==`和`!=`快。
-# `undefined`、`null`、`0`、`false`、`NaN`、`空字符串`的逻辑结果均为false
-# `typeof`、`instanceof`和`contructor`
+## `undefined`、`null`、`0`、`false`、`NaN`、`空字符串`的逻辑结果均为false
+## `typeof`、`instanceof`和`contructor`
 ```javascript
 var arr = ["a", "b", "c"];
 typeof arr;   // 返回 "object" 
 arr instanceof Array // true
 arr.constructor();  //[]
 ```
-# 自执行匿名函数/立即调用函数表达式
+## 自执行匿名函数/立即调用函数表达式
 函数在创建之后直接自动执行，通常称之为自执行匿名函数（Self-Invoked Anonymous Function）或立即调用函数表达式（Immediately Invoked Function Expression ）。格式如下：
 ```javascript
 ( function() {}() );
@@ -44,21 +44,21 @@ var f = function() {}();
 1 > function() {}();
 // ...
 ```
-# 从数组中随机获取成员
+## 从数组中随机获取成员
 ```javascript
 var items = [12, 548 , 'a' , 2 , 5478 , 'foo' , 8852, , 'Doe' , 2145 , 119];
 var  randomItem = items[Math.floor(Math.random() * items.length)];
 ```
-# 获取指定范围内的随机数
+## 获取指定范围内的随机数
 ```javascript
 var x = Math.floor(Math.random() * (max - min + 1)) + min;
 ```
-# 生成从0到指定值的数字数组
+## 生成从0到指定值的数字数组
 ```javascript
 var numbersArray = [] , max = 100;
 for( var i=1; numbersArray.push(i++) < max;);  // numbersArray = [1,2,3 ... 100]
 ```
-# 生成随机的字母数字字符串
+## 生成随机的字母数字字符串
 ```javascript
 function generateRandomAlphaNum(len) {
     var rdmString = "";
@@ -67,24 +67,24 @@ function generateRandomAlphaNum(len) {
 }
 //generateRandomAlphaNum(50)=>"xzts8w4sf7id8yvf936m9529inj3nl1mf8bz7dbad6sp833di3"
 ```
-# 打乱数字数组的顺序
+## 打乱数字数组的顺序
 ```javascript
 var numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411];
 numbers = numbers.sort(function(){ return Math.random() - 0.5});
 /* numbers 数组将类似于 [120, 5, 228, -215, 400, 458, -85411, 122205]  */
 ```
-# 数组之间追加
+## 数组之间追加
 ```javascript
 var array1 = [12 , "foo" , {name "Joe"} , -2458];
 var array2 = ["Doe" , 555 , 100];
 Array.prototype.push.apply(array1, array2);
 /* array1 值为  [12 , "foo" , {name "Joe"} , -2458 , "Doe" , 555 , 100] */
 ```
-# 对象转换为数组
+## 对象转换为数组
 ```javascript
 var argArray = Array.prototype.slice.call(arguments);
 ```
-# 验证是否是数组
+## 验证是否是数组
 ```javascript
 function isArray(obj){
     return Object.prototype.toString.call(obj) === '[object Array]' ;
@@ -94,19 +94,19 @@ function isArray(obj){
 ```javascript
 Array.isArray(obj); // its a new Array method
 ```
-# 获取数组中的最大值和最小值
+## 获取数组中的最大值和最小值
 ```javascript
 var  numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411]; 
 var maxInNumbers = Math.max.apply(Math, numbers); 
 var minInNumbers = Math.min.apply(Math, numbers);
 ```
-# 保留指定小数位数
+## 保留指定小数位数
 ```javascript
 var num =2.443242342;
 num = num.toFixed(4);  // num will be equal to 2.4432
 ```
 注意，`toFixec()`返回的是字符串，不是数字。
-# 浮点计算的问题
+## 浮点计算的问题
 ```javascript
 0.1 + 0.2 === 0.3 // is false 
 9007199254740992 + 1 // is equal to 9007199254740992
@@ -114,7 +114,7 @@ num = num.toFixed(4);  // num will be equal to 2.4432
 ```
 为什么呢？因为0.1+0.2等于0.30000000000000004。JavaScript的数字都遵循IEEE 754标准构建，在内部都是64位浮点小数表示，具体可以参见[JavaScript中的数字是如何编码的](http://www.2ality.com/2012/04/number-encoding.html).
 可以通过使用`toFixed()`和`toPrecision()`来解决这个问题。
-# 通过for-in循环检查对象的属性
+## 通过for-in循环检查对象的属性
 下面这样的用法，可以防止迭代的时候进入到对象的原型属性中。
 ```javascript
 for (var name in object) {  
@@ -123,14 +123,14 @@ for (var name in object) {
     }  
 }
 ```
-# 逗号操作符
+## 逗号操作符
 ```javascript
 var a = 0; 
 var b = ( a++, 99 ); 
 console.log(a);  // a will be equal to 1 
 console.log(b);  // b is equal to 99
 ```
-# 提前检查传入isFinite()的参数
+## 提前检查传入isFinite()的参数
 ```javascript
 isFinite(0/0) ; // false
 isFinite("foo"); // false
@@ -140,7 +140,7 @@ isFinite(undefined);  // false
 isFinite();   // false
 isFinite(null);  // true，这点当特别注意
 ```
-# HTML字段转换函数
+## HTML字段转换函数
 ```javascript
 function escapeHTML(text) {  
     var replacements= {"<": "&lt;", ">": "&gt;","&": "&amp;", "\"": "&quot;"};                      
@@ -149,7 +149,7 @@ function escapeHTML(text) {
     }); 
 }
 ```
-# 处理WebSocket的超时
+## 处理WebSocket的超时
 ```javascript
 var timerID = 0; 
 function keepAlive() { 
@@ -166,7 +166,8 @@ function cancelKeepAlive() {
 }
 ```
 `keepAlive()`函数可以放在WebSocket连接的`onOpen()`方法的最后面，`cancelKeepAlive()`放在`onClose()`方法的最末尾。
-# 一行代码调试css层
+
+## 一行代码调试css层
 来看看下面的这段代码，它来自于谷歌“名猿”Addy Osmani在几天前贴出的一段代码，它的作用是用来调试你的CSS层。全部代码只有三行，但是你绝对可以把它放在一行里面完成：
 ```javascript
 [].forEach.call($$("*"),function(a){
@@ -261,6 +262,86 @@ var a = 12.34, // ~~a = 12
 ~~c == 0|c == parseInt(c, 10)
 ```
 最终，我们获得了一个位于0和16777216之间的随机整数，也就是我们想要的随机颜色。此时我们只需要使用toString(16)将它转化为十六进制数即可。
+
+## 变量转换
+```javascript
+var myVar   = "3.14159",
+str     = ""+ myVar,//  to string
+int     = ~~myVar,  //  to integer
+float   = 1*myVar,  //  to float
+bool    = !!myVar,  /*  to boolean - any string with length
+and any number except 0 are true */
+array   = [myVar];  //  to array
+```
+但是转换日期(new Date(myVar))和正则表达式(new RegExp(myVar))必须使用构造函数，创建正则表达式的时候要使用/pattern/flags这样的简化形式。　
+
+## 取整同时转换成数值型
+```javascript
+//字符型变量参与运算时，JS会自动将其转换为数值型（如果无法转化，变为NaN）
+'10.567890' | 0
+//结果: 10
+//JS里面的所有数值型都是双精度浮点数,因此，JS在进行位运算时，会首先将这些数字运算数转换为整数，然后再执行运算
+//| 是二进制或， x|0 永远等于x；^为异或，同0异1，所以 x^0 还是永远等于x；至于~是按位取反，搞了两次以后值当然是一样的
+'10.567890' ^ 0        
+//结果: 10
+- 2.23456789 | 0
+//结果: -2
+~~-2.23456789
+//结果: -2
+```
+
+## 日期转数值
+```javascript
+//JS本身时间的内部表示形式就是Unix时间戳，以毫秒为单位记录着当前距离1970年1月1日0点的时间单位
+var d = +new Date(); //1295698416792
+```
+
+## 类数组对象转数组
+```javascript
+var arr =[].slice.call(arguments)
+```
+下面的实例用的更绝
+```javascript
+function test() {
+    var res = ['item1', 'item2']
+    res = res.concat(Array.prototype.slice.call(arguments)) //方法1
+    Array.prototype.push.apply(res, arguments)              //方法2
+}
+```
+
+## 进制之间的转换
+```javascript
+(int).toString(16); // converts int to hex, eg. 12 => "C"
+(int).toString(8);  // converts int to octal, eg. 12 => "14"
+parseInt(string,16) // converts hex to int, eg. "FF" => 255
+parseInt(string,8) // converts octal to int, eg. "20" => 16
+```
+
+## 将一个数组插入另一个数组指定的位置
+```javascript
+var a = [1,2,3,7,8,9];
+var b = [4,5,6];
+var insertIndex = 3;
+a.splice.apply(a, Array.prototype.concat(insertIndex, 0, b));
+```
+
+## 删除数组元素
+```javascript
+var a = [1,2,3,4,5];
+a.splice(3,1);           //a = [1,2,3,5]
+```
+大家也许会想为什么要用splice而不用delete,因为用delete将会在数组里留下一个空洞，而且后面的下标也并没有递减。
+
+## 判断是否为IE
+```javascript
+return "ActiveXObject" in window
+```
+## 不用第三方变量交换两个变量的值
+```javascript
+a=[b, b=a][0];
+//或者
+a^=b, b^=a, a^=b;
+```
 
 ---
 >感谢：
