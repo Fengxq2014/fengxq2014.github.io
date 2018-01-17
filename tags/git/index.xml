@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on DefNed Blog</title>
+    <link>http://defned.com/tags/git/</link>
+    <description>Recent content in Git on DefNed Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 24 May 2016 14:11:18 +0800</lastBuildDate>
+    
+	<atom:link href="http://defned.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git忽略规则及 gitignore规则不生效的解决办法</title>
+      <link>http://defned.com/post/git%E5%BF%BD%E7%95%A5%E8%A7%84%E5%88%99%E5%8F%8A-gitignore%E8%A7%84%E5%88%99%E4%B8%8D%E7%94%9F%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <pubDate>Tue, 24 May 2016 14:11:18 +0800</pubDate>
+      
+      <guid>http://defned.com/post/git%E5%BF%BD%E7%95%A5%E8%A7%84%E5%88%99%E5%8F%8A-gitignore%E8%A7%84%E5%88%99%E4%B8%8D%E7%94%9F%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <description>利用.gitignore过滤文件，如编译过程中的中间文件，等等，这些文件不需要被追踪管理。 但是，当项目一开始没有添加.gitignore文件，后来添加发现忽略规则不生效，原因是.gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。那么解决方法就是先把本地缓存删除（改变成未track状态），然后再提交：
+git rm -r --cached . git add . git commit -m &#39;update .gitignore&#39;  </description>
+    </item>
+    
+    <item>
+      <title>git 高级命令</title>
+      <link>http://defned.com/post/git-%E9%AB%98%E7%BA%A7%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 25 Jan 2016 15:19:53 +0800</pubDate>
+      
+      <guid>http://defned.com/post/git-%E9%AB%98%E7%BA%A7%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;你所不知道的Git高级命令，一起来学会它们吧。&lt;/p&gt;
+
+&lt;h2 id=&#34;输出最后一次提交的改变&#34;&gt;输出最后一次提交的改变&lt;/h2&gt;
+
+&lt;p&gt;这个命令，我经常使用它 来发送其他没有使用git的人来检查或者集成所修改的。它会输出最近提交的修改类容到一个zip文件中。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git archive -o ../updated.zip HEAD $(git diff --name-only HEAD^)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>git add命令</title>
+      <link>http://defned.com/post/git-add%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sun, 24 Jan 2016 21:54:53 +0800</pubDate>
+      
+      <guid>http://defned.com/post/git-add%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;git add 命令详解&lt;/p&gt;
+
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;git add命令主要用于把我们要提交的文件的信息添加到索引库中。当我们使用git commit时，git将依据索引库中的内容来进行文件的提交。&lt;/p&gt;
+
+&lt;h2 id=&#34;基本&#34;&gt;基本&lt;/h2&gt;
+
+&lt;p&gt;git add &lt;path&gt;表示 add to index only files created or modified and not those deleted
+我通常是通过git add &lt;path&gt;的形式把我们&lt;path&gt;添加到索引库中，&lt;path&gt;可以是文件也可以是目录。
+git不仅能判断出&lt;path&gt;中，修改（不包括已删除）的文件，还能判断出新添的文件，并把它们的信息添加到索引库中。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

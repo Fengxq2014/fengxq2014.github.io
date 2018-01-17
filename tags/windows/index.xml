@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on DefNed Blog</title>
+    <link>http://defned.com/tags/windows/</link>
+    <description>Recent content in Windows on DefNed Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Fri, 14 Apr 2017 16:40:47 +0800</lastBuildDate>
+    
+	<atom:link href="http://defned.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>cmder添加babun和WSL</title>
+      <link>http://defned.com/post/cmder%E6%B7%BB%E5%8A%A0babun%E5%92%8Cwsl/</link>
+      <pubDate>Fri, 14 Apr 2017 16:40:47 +0800</pubDate>
+      
+      <guid>http://defned.com/post/cmder%E6%B7%BB%E5%8A%A0babun%E5%92%8Cwsl/</guid>
+      <description>&lt;h2 id=&#34;babun&#34;&gt;babun&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Task parameters:
+&lt;code&gt;bash
+/icon &amp;quot;C:\Users\DefNed\.babun\cygwin\bin\mintty.exe&amp;quot; /dir &amp;quot;C:\Users\DefNed\&amp;quot;
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>在win10中运行zsh或者其他shell</title>
+      <link>http://defned.com/post/%E5%9C%A8win10%E4%B8%AD%E8%BF%90%E8%A1%8Czsh%E6%88%96%E8%80%85%E5%85%B6%E4%BB%96shell/</link>
+      <pubDate>Thu, 11 Aug 2016 10:36:04 +0800</pubDate>
+      
+      <guid>http://defned.com/post/%E5%9C%A8win10%E4%B8%AD%E8%BF%90%E8%A1%8Czsh%E6%88%96%E8%80%85%E5%85%B6%E4%BB%96shell/</guid>
+      <description>&lt;p&gt;win10周年更新之后Windows原生支持了bash shell，本文讨论如何在win10下运行zsh shell或者其他shell，关于win10 bash shell的安装，请自行谷歌。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

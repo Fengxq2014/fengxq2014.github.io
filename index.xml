@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DefNed Blog</title>
+    <link>http://defned.com/</link>
+    <description>Recent content on DefNed Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 02 Nov 2017 11:12:46 +0800</lastBuildDate>
+    
+	<atom:link href="http://defned.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>golang链接oracle数据库</title>
+      <link>http://defned.com/post/golang%E9%93%BE%E6%8E%A5oracle%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Thu, 02 Nov 2017 11:12:46 +0800</pubDate>
+      
+      <guid>http://defned.com/post/golang%E9%93%BE%E6%8E%A5oracle%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description>&lt;p&gt;本文记录golang使用oci链接Oracle数据库
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cmder添加babun和WSL</title>
+      <link>http://defned.com/post/cmder%E6%B7%BB%E5%8A%A0babun%E5%92%8Cwsl/</link>
+      <pubDate>Fri, 14 Apr 2017 16:40:47 +0800</pubDate>
+      
+      <guid>http://defned.com/post/cmder%E6%B7%BB%E5%8A%A0babun%E5%92%8Cwsl/</guid>
+      <description>&lt;h2 id=&#34;babun&#34;&gt;babun&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Task parameters:
+&lt;code&gt;bash
+/icon &amp;quot;C:\Users\DefNed\.babun\cygwin\bin\mintty.exe&amp;quot; /dir &amp;quot;C:\Users\DefNed\&amp;quot;
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>从hexo迁移到hugo</title>
+      <link>http://defned.com/post/hugo/</link>
+      <pubDate>Wed, 05 Apr 2017 21:16:33 +0800</pubDate>
+      
+      <guid>http://defned.com/post/hugo/</guid>
+      <description>&lt;p&gt;我的博客最初是基于hexo生成的静态博客，前段时间重新安装系统，写博客时发现电脑没有安装node环境，于是决定用hugo来生成文章。
+
+hugo总的来说有两个特点：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://defned.com/contact/</link>
+      <pubDate>Wed, 05 Apr 2017 16:32:30 +0800</pubDate>
+      
+      <guid>http://defned.com/contact/</guid>
+      <description>If you have any queries please contact me by email.
+You can also contact me on:
+ @Defned   @Defned   </description>
+    </item>
+    
+    <item>
+      <title>windows中删除超长的node modules</title>
+      <link>http://defned.com/post/windows%E4%B8%AD%E5%88%A0%E9%99%A4%E8%B6%85%E9%95%BF%E7%9A%84node-modules/</link>
+      <pubDate>Tue, 11 Oct 2016 13:41:55 +0800</pubDate>
+      
+      <guid>http://defned.com/post/windows%E4%B8%AD%E5%88%A0%E9%99%A4%E8%B6%85%E9%95%BF%E7%9A%84node-modules/</guid>
+      <description>&lt;p&gt;在Node.js开发中，依赖第三方项目，会产生比较深的文件目录，Windows下无法简单删除&lt;/p&gt;
+
+&lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;新建空白目录，如&lt;code&gt;F:\git\temp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;管理员方式打开命令行窗口&lt;/li&gt;
+&lt;li&gt;输入&lt;code&gt;robocopy F:\git\temp F:\git\test\node_modules /purge&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;回车，搞定</description>
+    </item>
+    
+    <item>
+      <title>在win10中运行zsh或者其他shell</title>
+      <link>http://defned.com/post/%E5%9C%A8win10%E4%B8%AD%E8%BF%90%E8%A1%8Czsh%E6%88%96%E8%80%85%E5%85%B6%E4%BB%96shell/</link>
+      <pubDate>Thu, 11 Aug 2016 10:36:04 +0800</pubDate>
+      
+      <guid>http://defned.com/post/%E5%9C%A8win10%E4%B8%AD%E8%BF%90%E8%A1%8Czsh%E6%88%96%E8%80%85%E5%85%B6%E4%BB%96shell/</guid>
+      <description>&lt;p&gt;win10周年更新之后Windows原生支持了bash shell，本文讨论如何在win10下运行zsh shell或者其他shell，关于win10 bash shell的安装，请自行谷歌。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript奇淫巧技</title>
+      <link>http://defned.com/post/javascript%E5%A5%87%E6%B7%AB%E5%B7%A7%E6%8A%80/</link>
+      <pubDate>Wed, 10 Aug 2016 14:14:02 +0800</pubDate>
+      
+      <guid>http://defned.com/post/javascript%E5%A5%87%E6%B7%AB%E5%B7%A7%E6%8A%80/</guid>
+      <description>&lt;p&gt;本文整理自网络，所有代码都经过V8 5.2.361.49测试，不定时更新
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mac 系统彻底删除Node js</title>
+      <link>http://defned.com/post/mac-%E7%B3%BB%E7%BB%9F%E5%BD%BB%E5%BA%95%E5%88%A0%E9%99%A4node-js/</link>
+      <pubDate>Mon, 01 Aug 2016 14:21:08 +0800</pubDate>
+      
+      <guid>http://defned.com/post/mac-%E7%B3%BB%E7%BB%9F%E5%BD%BB%E5%BA%95%E5%88%A0%E9%99%A4node-js/</guid>
+      <description>&lt;p&gt;首先创建一个shell文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;touch uninstall_node.sh
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git忽略规则及 gitignore规则不生效的解决办法</title>
+      <link>http://defned.com/post/git%E5%BF%BD%E7%95%A5%E8%A7%84%E5%88%99%E5%8F%8A-gitignore%E8%A7%84%E5%88%99%E4%B8%8D%E7%94%9F%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <pubDate>Tue, 24 May 2016 14:11:18 +0800</pubDate>
+      
+      <guid>http://defned.com/post/git%E5%BF%BD%E7%95%A5%E8%A7%84%E5%88%99%E5%8F%8A-gitignore%E8%A7%84%E5%88%99%E4%B8%8D%E7%94%9F%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <description>利用.gitignore过滤文件，如编译过程中的中间文件，等等，这些文件不需要被追踪管理。 但是，当项目一开始没有添加.gitignore文件，后来添加发现忽略规则不生效，原因是.gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。那么解决方法就是先把本地缓存删除（改变成未track状态），然后再提交：
+git rm -r --cached . git add . git commit -m &#39;update .gitignore&#39;  </description>
+    </item>
+    
+    <item>
+      <title>Node入门</title>
+      <link>http://defned.com/post/node%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 25 Apr 2016 17:39:54 +0800</pubDate>
+      
+      <guid>http://defned.com/post/node%E5%85%A5%E9%97%A8/</guid>
+      <description>&lt;p&gt;&lt;em&gt;“这是我读过最好的教程之一此前我作为一名java程序员，我总觉得JavaScript像妖术，但在这教程中，你真的把它讲的浅显易懂”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“我真的忍不住感谢你这么好的node入门教程，内容非常精彩”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“这是我为数不多认真读完的入门教程，只因为写的太好了”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;购买“Node入门”中文版电子书&amp;mdash;&amp;ndash;&amp;gt;&lt;a href=&#34;http://www.nodebeginner.org/buy-chinese/&#34;&gt;立即购买&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;作者： &lt;a href=&#34;http://twitter.com/manuelkiessling&#34;&gt;Manuel Kiessling&lt;/a&gt;
+翻译： &lt;a href=&#34;http://weibo.com/goddyzhao&#34;&gt;goddyzhao&lt;/a&gt; &amp;amp; &lt;a href=&#34;http://www.otakustay.com/&#34;&gt;GrayZhang&lt;/a&gt; &amp;amp; &lt;a href=&#34;http://weibo.com/cmonday&#34;&gt;MondayChen&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>简明Vim练级攻略</title>
+      <link>http://defned.com/post/%E7%AE%80%E6%98%8Evim%E7%BB%83%E7%BA%A7%E6%94%BB%E7%95%A5/</link>
+      <pubDate>Tue, 29 Mar 2016 16:25:34 +0800</pubDate>
+      
+      <guid>http://defned.com/post/%E7%AE%80%E6%98%8Evim%E7%BB%83%E7%BA%A7%E6%94%BB%E7%95%A5/</guid>
+      <description>&lt;p&gt;vim的学习曲线相当的大（参看各种文本编辑器的学习曲线），所以，如果你一开始看到的是一大堆VIM的命令分类，你一定会对这个编辑器失去兴趣的。下面的文章翻译自《Learn Vim Progressively》，我觉得这是给新手最好的VIM的升级教程了，没有列举所有的命令，只是列举了那些最有用的命令。非常不错。
+
+——————————正文开始——————————&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Node js入门 NPM与包</title>
+      <link>http://defned.com/post/node-js%E5%85%A5%E9%97%A8-npm%E4%B8%8E%E5%8C%85/</link>
+      <pubDate>Tue, 29 Mar 2016 11:09:45 +0800</pubDate>
+      
+      <guid>http://defned.com/post/node-js%E5%85%A5%E9%97%A8-npm%E4%B8%8E%E5%8C%85/</guid>
+      <description>&lt;p&gt;Node.js组织了自身的核心模块，也使得第三方文件模块可以有序的编写和使用。但是第三方模块中，模块与模块之间仍然是散列在各地的，互相之间不能直接引用。而在模块之外，包和NPM则是将模块联系起来的一种机制。&lt;/p&gt;
+
+&lt;p&gt;在介绍NPM之前，不得不提起CommonJs的包规范。JavaScript不似Java或者其他语言那样，具有模块和包机构。Node.js对模块规范的实现，一定程度上解决了变量依赖、依赖关系等代码组织性问题。包的出现，则是在模块的基础上进一步组织JavaScript代码。
+
+CommonJs的包规范的定义其实也十分简单，它是由包结构和包描述文件两部分组成，前者用于组织包中的各种文件，后者用于描述包的相关信息，以供外部读取分析。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>http://defned.com/about/</link>
+      <pubDate>Tue, 26 Jan 2016 21:08:06 +0800</pubDate>
+      
+      <guid>http://defned.com/about/</guid>
+      <description>{ &amp;quot;name&amp;quot;: &amp;quot;DefNed&amp;quot;, &amp;quot;description&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;version&amp;quot;: &amp;quot;0.0.2&amp;quot;, &amp;quot;keywords&amp;quot;: [&amp;quot;Noder&amp;quot;, &amp;quot;Frontend Developer&amp;quot;, &amp;quot;C#er&amp;quot;,&amp;quot;Gopher&amp;quot;], &amp;quot;contact&amp;quot;: { &amp;quot;weibo&amp;quot;: &amp;quot;@一只蜜獾HonyBadger&amp;quot; }, &amp;quot;location&amp;quot;: &amp;quot;南京&amp;quot;, &amp;quot;workAt&amp;quot;: &amp;quot;Seuic&amp;quot; }  </description>
+    </item>
+    
+    <item>
+      <title>node js入门 安装</title>
+      <link>http://defned.com/post/node-js%E5%85%A5%E9%97%A8-%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Tue, 26 Jan 2016 11:32:51 +0800</pubDate>
+      
+      <guid>http://defned.com/post/node-js%E5%85%A5%E9%97%A8-%E5%AE%89%E8%A3%85/</guid>
+      <description>&lt;h1 id=&#34;版本控制&#34;&gt;版本控制&lt;/h1&gt;
+
+&lt;p&gt;由于Node.js版本发布较快，网友称之为“版本帝”，所以一个有效的版本控制管理软件是必不可少的。目前主要的版本控制有nvm和n两种。下面分别介绍：&lt;/p&gt;
+
+&lt;h2 id=&#34;nvm-nvmw&#34;&gt;nvm&amp;amp;nvmw&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;nvm &lt;em&gt;Node Version Manager&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;nvmw是nvm的Windows版本，用于Windows下Node.js版本管理&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;安装一个nvm&lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;https://github.com/creationix/nvm&lt;/a&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>git 高级命令</title>
+      <link>http://defned.com/post/git-%E9%AB%98%E7%BA%A7%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 25 Jan 2016 15:19:53 +0800</pubDate>
+      
+      <guid>http://defned.com/post/git-%E9%AB%98%E7%BA%A7%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;你所不知道的Git高级命令，一起来学会它们吧。&lt;/p&gt;
+
+&lt;h2 id=&#34;输出最后一次提交的改变&#34;&gt;输出最后一次提交的改变&lt;/h2&gt;
+
+&lt;p&gt;这个命令，我经常使用它 来发送其他没有使用git的人来检查或者集成所修改的。它会输出最近提交的修改类容到一个zip文件中。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git archive -o ../updated.zip HEAD $(git diff --name-only HEAD^)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>git add命令</title>
+      <link>http://defned.com/post/git-add%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sun, 24 Jan 2016 21:54:53 +0800</pubDate>
+      
+      <guid>http://defned.com/post/git-add%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;git add 命令详解&lt;/p&gt;
+
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;git add命令主要用于把我们要提交的文件的信息添加到索引库中。当我们使用git commit时，git将依据索引库中的内容来进行文件的提交。&lt;/p&gt;
+
+&lt;h2 id=&#34;基本&#34;&gt;基本&lt;/h2&gt;
+
+&lt;p&gt;git add &lt;path&gt;表示 add to index only files created or modified and not those deleted
+我通常是通过git add &lt;path&gt;的形式把我们&lt;path&gt;添加到索引库中，&lt;path&gt;可以是文件也可以是目录。
+git不仅能判断出&lt;path&gt;中，修改（不包括已删除）的文件，还能判断出新添的文件，并把它们的信息添加到索引库中。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on DefNed Blog</title>
+    <link>http://defned.com/tags/vim/</link>
+    <description>Recent content in Vim on DefNed Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 29 Mar 2016 16:25:34 +0800</lastBuildDate>
+    
+	<atom:link href="http://defned.com/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>简明Vim练级攻略</title>
+      <link>http://defned.com/post/%E7%AE%80%E6%98%8Evim%E7%BB%83%E7%BA%A7%E6%94%BB%E7%95%A5/</link>
+      <pubDate>Tue, 29 Mar 2016 16:25:34 +0800</pubDate>
+      
+      <guid>http://defned.com/post/%E7%AE%80%E6%98%8Evim%E7%BB%83%E7%BA%A7%E6%94%BB%E7%95%A5/</guid>
+      <description>&lt;p&gt;vim的学习曲线相当的大（参看各种文本编辑器的学习曲线），所以，如果你一开始看到的是一大堆VIM的命令分类，你一定会对这个编辑器失去兴趣的。下面的文章翻译自《Learn Vim Progressively》，我觉得这是给新手最好的VIM的升级教程了，没有列举所有的命令，只是列举了那些最有用的命令。非常不错。
+
+——————————正文开始——————————&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
