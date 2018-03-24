@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on DefNed Blog</title>
+    <link>http://defned.com/topics/java/</link>
+    <description>Recent content in Java on DefNed Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 22 Mar 2018 20:40:46 +0800</lastBuildDate>
+    
+	<atom:link href="http://defned.com/topics/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>java Rsa pkcs#1 加解密及签名验签</title>
+      <link>http://defned.com/post/java-rsa-pkcs1/</link>
+      <pubDate>Thu, 22 Mar 2018 20:40:46 +0800</pubDate>
+      
+      <guid>http://defned.com/post/java-rsa-pkcs1/</guid>
+      <description>最近对接api接口，需要和对方进行rsa验签，但是对方rsa密钥格式是RSA_PKCS1_PADDING格式，java中一般都是用pkcs#8，本文对密钥格式转换，加密过程进行记录，以供大家借鉴。转载请注明出处：defned.com/post/java-rsa-pkcs1/
+公钥 RSA 密钥体系中对外公开的部分，通常用于数据加密、验证数字签名。
+私钥 RSA 密钥体系中非公开的部分，通常用于数据解密、数据签名。
+签名 就是只有信息的发送者才能产生的，别人无法伪造的一段数字串，它同时也是对发送者发送的信息的真实性的一个证明。
+java生成pkcs1密钥对 KeyPairGenerator rsa1 = KeyPairGenerator.getInstance(&amp;quot;RSA&amp;quot;, new BouncyCastleProvider()); rsa1.initialize(1024, new SecureRandom()); KeyPair keyPair = rsa1.generateKeyPair(); PublicKey pub = keyPair.getPublic(); // pkcs8公钥 byte[] pubBytes = pub.getEncoded(); SubjectPublicKeyInfo spkInfo = SubjectPublicKeyInfo.getInstance(pubBytes); ASN1Primitive primitive = spkInfo.parsePublicKey(); byte[] publicKeyPKCS1 = primitive.getEncoded(); // pkcs1公钥 PrivateKey priv = keyPair.getPrivate(); // pkcs8私钥 byte[] privBytes = priv.getEncoded(); PrivateKeyInfo pkInfo = PrivateKeyInfo.getInstance(privBytes); ASN1Encodable encodable = pkInfo.parsePrivateKey(); ASN1Primitive primitive = encodable.toASN1Primitive(); byte[] privateKeyPKCS1 = primitive.</description>
+    </item>
+    
+  </channel>
+</rss>

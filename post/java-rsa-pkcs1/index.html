@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.32.4" />
+
+  <title>java Rsa pkcs#1 加解密及签名验签 &middot; DefNed Blog</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://defned.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://defned.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="http://defned.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="http://defned.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="http://defned.com/">DefNed</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://defned.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://defned.com/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://defned.com/topics/"><i class='fa fa-folder fa-fw'></i>Topics</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://defned.com/tags/"><i class='fa fa-tags fa-fw'></i>Tags</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://defned.com/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://defned.com/contact/"><i class='fa fa-phone-square fa-fw'></i>Contact</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="http://weibo.com/u/2061371847" target="_blank"><i class="fa fa-weibo fa-fw"></i>Weibo</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/Fengxq2014" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2016. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>java Rsa pkcs#1 加解密及签名验签</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>22 Mar 2018, 20:40</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="http://defned.com/topics/java">java</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://defned.com/tags/java">java</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://defned.com/tags/rsa">rsa</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  
+
+<p>最近对接api接口，需要和对方进行rsa验签，但是对方rsa密钥格式是RSA_PKCS1_PADDING格式，java中一般都是用pkcs#8，本文对密钥格式转换，加密过程进行记录，以供大家借鉴。转载请注明出处：<em><a href="http://defned.com/post/java-rsa-pkcs1">defned.com/post/java-rsa-pkcs1/</a></em></p>
+
+<h3 id="公钥">公钥</h3>
+
+<p>RSA 密钥体系中对外公开的部分，通常用于数据加密、验证数字签名。</p>
+
+<h3 id="私钥">私钥</h3>
+
+<p>RSA 密钥体系中非公开的部分，通常用于数据解密、数据签名。</p>
+
+<h3 id="签名">签名</h3>
+
+<p>就是只有信息的发送者才能产生的，别人无法伪造的一段数字串，它同时也是对发送者发送的信息的真实性的一个证明。</p>
+
+<h3 id="java生成pkcs1密钥对">java生成pkcs1密钥对</h3>
+
+<pre><code class="language-java">KeyPairGenerator rsa1 = KeyPairGenerator.getInstance(&quot;RSA&quot;, new BouncyCastleProvider());
+rsa1.initialize(1024, new SecureRandom());
+KeyPair keyPair = rsa1.generateKeyPair();
+
+PublicKey pub = keyPair.getPublic(); // pkcs8公钥
+byte[] pubBytes = pub.getEncoded();
+SubjectPublicKeyInfo spkInfo = SubjectPublicKeyInfo.getInstance(pubBytes);
+ASN1Primitive primitive = spkInfo.parsePublicKey();
+byte[] publicKeyPKCS1 = primitive.getEncoded(); // pkcs1公钥
+
+PrivateKey priv = keyPair.getPrivate(); // pkcs8私钥
+byte[] privBytes = priv.getEncoded();
+PrivateKeyInfo pkInfo = PrivateKeyInfo.getInstance(privBytes);
+ASN1Encodable encodable = pkInfo.parsePrivateKey();
+ASN1Primitive primitive = encodable.toASN1Primitive();
+byte[] privateKeyPKCS1 = primitive.getEncoded(); // pkcs1私钥
+</code></pre>
+
+<h3 id="pkcs1公钥加密">pkcs1公钥加密</h3>
+
+<pre><code class="language-java">public static byte[] Encrypt(String data, org.bouncycastle.asn1.pkcs.RSAPublicKey rsaPublicKey) throws Exception {
+        Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+        Cipher cipher = Cipher.getInstance(&quot;RSA/None/PKCS1Padding&quot;, &quot;BC&quot;);
+        Key publicKey = new java.security.interfaces.RSAPublicKey() {
+            @Override
+            public BigInteger getPublicExponent() {
+                return rsaPublicKey.getPublicExponent();
+            }
+
+            @Override
+            public String getAlgorithm() {
+                return &quot;RSA&quot;;
+            }
+
+            @Override
+            public String getFormat() {
+                return null;
+            }
+
+            @Override
+            public byte[] getEncoded() {
+                return new byte[0];
+            }
+
+            @Override
+            public BigInteger getModulus() {
+                return rsaPublicKey.getModulus();
+            }
+        };
+        cipher.init(Cipher.ENCRYPT_MODE, publicKey);
+        // 对数据分段
+        byte[] b = data.getBytes();
+        int inputLen = b.length;
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        int offSet = 0;
+        byte[] cache;
+        int i = 0;
+        while (inputLen - offSet &gt; 0) {
+            if (inputLen - offSet &gt; MAX_ENCRYPT_BLOCK) {
+                cache = cipher.doFinal(b, offSet, MAX_ENCRYPT_BLOCK);
+            } else {
+                cache = cipher.doFinal(b, offSet, inputLen - offSet);
+            }
+            out.write(cache, 0, cache.length);
+            i++;
+            offSet = i * MAX_ENCRYPT_BLOCK;
+        }
+        return out.toByteArray();
+    }
+</code></pre>
+
+<h3 id="pkcs1公钥解密">pkcs1公钥解密</h3>
+
+<pre><code class="language-java">public static byte[] Decrypt(byte[] data, org.bouncycastle.asn1.pkcs.RSAPublicKey rsaPublicKey) throws Exception {
+        Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+        Cipher cipher = Cipher.getInstance(&quot;RSA/None/PKCS1Padding&quot;, &quot;BC&quot;);
+        Key publicKey = new java.security.interfaces.RSAPublicKey() {
+            @Override
+            public BigInteger getPublicExponent() {
+                return rsaPublicKey.getPublicExponent();
+            }
+
+            @Override
+            public String getAlgorithm() {
+                return &quot;RSA&quot;;
+            }
+
+            @Override
+            public String getFormat() {
+                return null;
+            }
+
+            @Override
+            public byte[] getEncoded() {
+                return new byte[0];
+            }
+
+            @Override
+            public BigInteger getModulus() {
+                return rsaPublicKey.getModulus();
+            }
+        };
+        cipher.init(Cipher.DECRYPT_MODE, publicKey);
+        // 对数据分段解密
+        byte[] b = data;
+        int inputLen = b.length;
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        int offSet = 0;
+        byte[] cache;
+        int i = 0;
+        while (inputLen - offSet &gt; 0) {
+            if (inputLen - offSet &gt; MAX_DECRYPT_BLOCK) {
+                cache = cipher.doFinal(b, offSet, MAX_DECRYPT_BLOCK);
+            } else {
+                cache = cipher.doFinal(b, offSet, inputLen - offSet);
+            }
+            out.write(cache, 0, cache.length);
+            i++;
+            offSet = i * MAX_DECRYPT_BLOCK;
+        }
+        return out.toByteArray();
+    }
+</code></pre>
+
+<h3 id="pkcs1私钥加密">pkcs1私钥加密</h3>
+
+<pre><code class="language-java">public static byte[] Encrypt(String data,org.bouncycastle.asn1.pkcs.RSAPrivateKey rsaPrivateKey) throws Exception {
+        Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+        Cipher cipher = Cipher.getInstance(&quot;RSA/None/PKCS1Padding&quot;, &quot;BC&quot;);
+        Key privateKey = new java.security.interfaces.RSAPrivateKey() {
+            @Override
+            public BigInteger getPrivateExponent() {
+                return rsaPrivateKey.getPrivateExponent();
+            }
+
+            @Override
+            public String getAlgorithm() {
+                return null;
+            }
+
+            @Override
+            public String getFormat() {
+                return null;
+            }
+
+            @Override
+            public byte[] getEncoded() {
+                return new byte[0];
+            }
+
+            @Override
+            public BigInteger getModulus() {
+                return rsaPrivateKey.getModulus();
+            }
+        };
+        cipher.init(Cipher.ENCRYPT_MODE, privateKey);
+        // 对数据分段
+        byte[] b = data.getBytes();
+        int inputLen = b.length;
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        int offSet = 0;
+        byte[] cache;
+        int i = 0;
+        while (inputLen - offSet &gt; 0) {
+            if (inputLen - offSet &gt; MAX_ENCRYPT_BLOCK) {
+                cache = cipher.doFinal(b, offSet, MAX_ENCRYPT_BLOCK);
+            } else {
+                cache = cipher.doFinal(b, offSet, inputLen - offSet);
+            }
+            out.write(cache, 0, cache.length);
+            i++;
+            offSet = i * MAX_ENCRYPT_BLOCK;
+        }
+        return out.toByteArray();
+    }
+</code></pre>
+
+<h3 id="pkcs1私钥解密">pkcs1私钥解密</h3>
+
+<pre><code class="language-java">public static byte[] Decrypt(String data, org.bouncycastle.asn1.pkcs.RSAPrivateKey rsaPrivateKey) throws Exception{
+        Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+        Cipher cipher = Cipher.getInstance(&quot;RSA/None/PKCS1Padding&quot;, &quot;BC&quot;);
+        Key privateKey = new java.security.interfaces.RSAPrivateKey() {
+            @Override
+            public BigInteger getPrivateExponent() {
+                return rsaPrivateKey.getPrivateExponent();
+            }
+
+            @Override
+            public String getAlgorithm() {
+                return null;
+            }
+
+            @Override
+            public String getFormat() {
+                return null;
+            }
+
+            @Override
+            public byte[] getEncoded() {
+                return new byte[0];
+            }
+
+            @Override
+            public BigInteger getModulus() {
+                return rsaPrivateKey.getModulus();
+            }
+        };
+        cipher.init(Cipher.DECRYPT_MODE, privateKey);
+        // 对数据分段解密
+        byte[] b = data.getBytes();
+        int inputLen = b.length;
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        int offSet = 0;
+        byte[] cache;
+        int i = 0;
+        while (inputLen - offSet &gt; 0) {
+            if (inputLen - offSet &gt; MAX_DECRYPT_BLOCK) {
+                cache = cipher.doFinal(b, offSet, MAX_DECRYPT_BLOCK);
+            } else {
+                cache = cipher.doFinal(b, offSet, inputLen - offSet);
+            }
+            out.write(cache, 0, cache.length);
+            i++;
+            offSet = i * MAX_DECRYPT_BLOCK;
+        }
+        return out.toByteArray();
+    }
+</code></pre>
+
+<h3 id="签名-1">签名</h3>
+
+<ul>
+<li>对报文进行特征值计算，相关算法有：md5、sha1、sha256、sha512等</li>
+<li>用私钥对特征值加密，获得签名数据</li>
+</ul>
+
+<h3 id="验签">验签</h3>
+
+<ul>
+<li>对报文用公钥解密，获得特征值</li>
+<li>对报文进行特征值计算</li>
+<li>对比两次的特征值是否相等</li>
+</ul>
+
+<hr />
+
+<blockquote>
+<p>注意：</p>
+
+<ul>
+<li>公钥、私钥都可以加密解密</li>
+<li>以1024bit长度密钥为例，加密报文最大长度为1024/8-11，即117字节，解密报文最大长度为 1024/8，即128字节</li>
+</ul>
+</blockquote>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="http://defned.com/post/golang%E9%93%BE%E6%8E%A5oracle%E6%95%B0%E6%8D%AE%E5%BA%93/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="http://defned.com/post/golang%E9%93%BE%E6%8E%A5oracle%E6%95%B0%E6%8D%AE%E5%BA%93/">golang链接oracle数据库</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'defned-blog';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="http://defned.com/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-96875439-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+</body>
+</html>
+
