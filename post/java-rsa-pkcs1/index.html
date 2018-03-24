@@ -259,9 +259,8 @@
 
 </div>
 
-  
-
-<p>最近对接api接口，需要和对方进行rsa验签，但是对方rsa密钥格式是RSA_PKCS1_PADDING格式，java中一般都是用pkcs#8，本文对密钥格式转换，加密过程进行记录，以供大家借鉴。转载请注明出处：<em><a href="http://defned.com/post/java-rsa-pkcs1">defned.com/post/java-rsa-pkcs1/</a></em></p>
+  <p>最近对接api接口，需要和对方进行rsa验签，但是对方rsa密钥格式是RSA_PKCS1_PADDING格式，java中一般都是用pkcs#8，本文对密钥格式转换，加密过程进行记录，以供大家借鉴。转载请注明出处：<em><a href="http://defned.com/post/java-rsa-pkcs1">defned.com/post/java-rsa-pkcs1/</a></em>
+</p>
 
 <h3 id="公钥">公钥</h3>
 
@@ -532,7 +531,6 @@ byte[] privateKeyPKCS1 = primitive.getEncoded(); // pkcs1私钥
 <li>以1024bit长度密钥为例，加密报文最大长度为1024/8-11，即117字节，解密报文最大长度为 1024/8，即128字节</li>
 </ul>
 </blockquote>
-
 
   
 <div class="prev-next-post pure-g">
