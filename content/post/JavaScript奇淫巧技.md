@@ -346,6 +346,7 @@ a^=b, b^=a, a^=b;
 
 ---
 >感谢：
+
 >- [不可能不确定-JavaScript奇技淫巧45招](https://chensd.com/2015-01/45-useful-javascript-tips-tricks-and-best-practices.html)
 >- [JavaScript 匿名函数有哪几种执行方式? - 回答作者: 长天之云](http://zhihu.com/question/20249179/answer/14487857)
 >- [Learning much javascript from one line of code](http://arqex.com/939/learning-much-javascript-one-line-code)
