@@ -1,101 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Node.js on DefNed Blog</title>
-    <link>http://defned.com/tags/node.js/</link>
-    <description>Recent content in Node.js on DefNed Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 11 Oct 2016 13:41:55 +0800</lastBuildDate>
-    
-	<atom:link href="http://defned.com/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>windows中删除超长的node modules</title>
-      <link>http://defned.com/post/windows%E4%B8%AD%E5%88%A0%E9%99%A4%E8%B6%85%E9%95%BF%E7%9A%84node-modules/</link>
-      <pubDate>Tue, 11 Oct 2016 13:41:55 +0800</pubDate>
-      
-      <guid>http://defned.com/post/windows%E4%B8%AD%E5%88%A0%E9%99%A4%E8%B6%85%E9%95%BF%E7%9A%84node-modules/</guid>
-      <description>&lt;p&gt;在Node.js开发中，依赖第三方项目，会产生比较深的文件目录，Windows下无法简单删除&lt;/p&gt;
-
-&lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;新建空白目录，如&lt;code&gt;F:\git\temp&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;管理员方式打开命令行窗口&lt;/li&gt;
-&lt;li&gt;输入&lt;code&gt;robocopy F:\git\temp F:\git\test\node_modules /purge&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;回车，搞定</description>
-    </item>
-    
-    <item>
-      <title>mac 系统彻底删除Node js</title>
-      <link>http://defned.com/post/mac-%E7%B3%BB%E7%BB%9F%E5%BD%BB%E5%BA%95%E5%88%A0%E9%99%A4node-js/</link>
-      <pubDate>Mon, 01 Aug 2016 14:21:08 +0800</pubDate>
-      
-      <guid>http://defned.com/post/mac-%E7%B3%BB%E7%BB%9F%E5%BD%BB%E5%BA%95%E5%88%A0%E9%99%A4node-js/</guid>
-      <description>&lt;p&gt;首先创建一个shell文件&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;touch uninstall_node.sh
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>Node入门</title>
-      <link>http://defned.com/post/node%E5%85%A5%E9%97%A8/</link>
-      <pubDate>Mon, 25 Apr 2016 17:39:54 +0800</pubDate>
-      
-      <guid>http://defned.com/post/node%E5%85%A5%E9%97%A8/</guid>
-      <description>&lt;p&gt;&lt;em&gt;“这是我读过最好的教程之一此前我作为一名java程序员，我总觉得JavaScript像妖术，但在这教程中，你真的把它讲的浅显易懂”&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;“我真的忍不住感谢你这么好的node入门教程，内容非常精彩”&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;“这是我为数不多认真读完的入门教程，只因为写的太好了”&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;购买“Node入门”中文版电子书&amp;mdash;&amp;ndash;&amp;gt;&lt;a href=&#34;http://www.nodebeginner.org/buy-chinese/&#34;&gt;立即购买&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;作者： &lt;a href=&#34;http://twitter.com/manuelkiessling&#34;&gt;Manuel Kiessling&lt;/a&gt;
-翻译： &lt;a href=&#34;http://weibo.com/goddyzhao&#34;&gt;goddyzhao&lt;/a&gt; &amp;amp; &lt;a href=&#34;http://www.otakustay.com/&#34;&gt;GrayZhang&lt;/a&gt; &amp;amp; &lt;a href=&#34;http://weibo.com/cmonday&#34;&gt;MondayChen&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Node js入门 NPM与包</title>
-      <link>http://defned.com/post/node-js%E5%85%A5%E9%97%A8-npm%E4%B8%8E%E5%8C%85/</link>
-      <pubDate>Tue, 29 Mar 2016 11:09:45 +0800</pubDate>
-      
-      <guid>http://defned.com/post/node-js%E5%85%A5%E9%97%A8-npm%E4%B8%8E%E5%8C%85/</guid>
-      <description>&lt;p&gt;Node.js组织了自身的核心模块，也使得第三方文件模块可以有序的编写和使用。但是第三方模块中，模块与模块之间仍然是散列在各地的，互相之间不能直接引用。而在模块之外，包和NPM则是将模块联系起来的一种机制。&lt;/p&gt;
-
-&lt;p&gt;在介绍NPM之前，不得不提起CommonJs的包规范。JavaScript不似Java或者其他语言那样，具有模块和包机构。Node.js对模块规范的实现，一定程度上解决了变量依赖、依赖关系等代码组织性问题。包的出现，则是在模块的基础上进一步组织JavaScript代码。
-
-CommonJs的包规范的定义其实也十分简单，它是由包结构和包描述文件两部分组成，前者用于组织包中的各种文件，后者用于描述包的相关信息，以供外部读取分析。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>node js入门 安装</title>
-      <link>http://defned.com/post/node-js%E5%85%A5%E9%97%A8-%E5%AE%89%E8%A3%85/</link>
-      <pubDate>Tue, 26 Jan 2016 11:32:51 +0800</pubDate>
-      
-      <guid>http://defned.com/post/node-js%E5%85%A5%E9%97%A8-%E5%AE%89%E8%A3%85/</guid>
-      <description>&lt;h1 id=&#34;版本控制&#34;&gt;版本控制&lt;/h1&gt;
-
-&lt;p&gt;由于Node.js版本发布较快，网友称之为“版本帝”，所以一个有效的版本控制管理软件是必不可少的。目前主要的版本控制有nvm和n两种。下面分别介绍：&lt;/p&gt;
-
-&lt;h2 id=&#34;nvm-nvmw&#34;&gt;nvm&amp;amp;nvmw&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;nvm &lt;em&gt;Node Version Manager&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;nvmw是nvm的Windows版本，用于Windows下Node.js版本管理&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;安装一个nvm&lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;https://github.com/creationix/nvm&lt;/a&gt;
-&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Node.js on DefNed Blog</title><link>https://blog.dfned.com/tags/node.js/</link><description>Recent content in Node.js on DefNed Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>&amp;copy; 2016. All rights reserved.</copyright><lastBuildDate>Tue, 11 Oct 2016 13:41:55 +0800</lastBuildDate><atom:link href="https://blog.dfned.com/tags/node.js/index.xml" rel="self" type="application/rss+xml"/><item><title>windows中删除超长的node modules</title><link>https://blog.dfned.com/post/windows%E4%B8%AD%E5%88%A0%E9%99%A4%E8%B6%85%E9%95%BF%E7%9A%84node-modules/</link><pubDate>Tue, 11 Oct 2016 13:41:55 +0800</pubDate><guid>https://blog.dfned.com/post/windows%E4%B8%AD%E5%88%A0%E9%99%A4%E8%B6%85%E9%95%BF%E7%9A%84node-modules/</guid><description>&lt;p>在Node.js开发中，依赖第三方项目，会产生比较深的文件目录，Windows下无法简单删除&lt;/p>
+&lt;h2 id="解决方法">解决方法&lt;/h2>
+&lt;ul>
+&lt;li>新建空白目录，如&lt;code>F:\git\temp&lt;/code>&lt;/li>
+&lt;li>管理员方式打开命令行窗口&lt;/li>
+&lt;li>输入&lt;code>robocopy F:\git\temp F:\git\test\node_modules /purge&lt;/code>&lt;/li>
+&lt;li>回车，搞定&lt;/li>
+&lt;/ul></description></item><item><title>mac 系统彻底删除Node js</title><link>https://blog.dfned.com/post/mac-%E7%B3%BB%E7%BB%9F%E5%BD%BB%E5%BA%95%E5%88%A0%E9%99%A4node-js/</link><pubDate>Mon, 01 Aug 2016 14:21:08 +0800</pubDate><guid>https://blog.dfned.com/post/mac-%E7%B3%BB%E7%BB%9F%E5%BD%BB%E5%BA%95%E5%88%A0%E9%99%A4node-js/</guid><description>&lt;p>首先创建一个shell文件&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>touch uninstall_node.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Node入门</title><link>https://blog.dfned.com/post/node%E5%85%A5%E9%97%A8/</link><pubDate>Mon, 25 Apr 2016 17:39:54 +0800</pubDate><guid>https://blog.dfned.com/post/node%E5%85%A5%E9%97%A8/</guid><description>&lt;p>&lt;em>“这是我读过最好的教程之一此前我作为一名java程序员，我总觉得JavaScript像妖术，但在这教程中，你真的把它讲的浅显易懂”&lt;/em>&lt;/p>
+&lt;p>&lt;em>“我真的忍不住感谢你这么好的node入门教程，内容非常精彩”&lt;/em>&lt;/p>
+&lt;p>&lt;em>“这是我为数不多认真读完的入门教程，只因为写的太好了”&lt;/em>&lt;/p>
+&lt;p>购买“Node入门”中文版电子书&amp;mdash;&amp;ndash;&amp;gt;&lt;a href="http://www.nodebeginner.org/buy-chinese/">立即购买&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>作者： &lt;a href="http://twitter.com/manuelkiessling">Manuel Kiessling&lt;/a>
+翻译： &lt;a href="http://weibo.com/goddyzhao">goddyzhao&lt;/a> &amp;amp; &lt;a href="http://www.otakustay.com/">GrayZhang&lt;/a> &amp;amp; &lt;a href="http://weibo.com/cmonday">MondayChen&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;/blockquote></description></item><item><title>Node js入门 NPM与包</title><link>https://blog.dfned.com/post/node-js%E5%85%A5%E9%97%A8-npm%E4%B8%8E%E5%8C%85/</link><pubDate>Tue, 29 Mar 2016 11:09:45 +0800</pubDate><guid>https://blog.dfned.com/post/node-js%E5%85%A5%E9%97%A8-npm%E4%B8%8E%E5%8C%85/</guid><description>&lt;p>Node.js组织了自身的核心模块，也使得第三方文件模块可以有序的编写和使用。但是第三方模块中，模块与模块之间仍然是散列在各地的，互相之间不能直接引用。而在模块之外，包和NPM则是将模块联系起来的一种机制。&lt;/p>
+&lt;p>在介绍NPM之前，不得不提起CommonJs的包规范。JavaScript不似Java或者其他语言那样，具有模块和包机构。Node.js对模块规范的实现，一定程度上解决了变量依赖、依赖关系等代码组织性问题。包的出现，则是在模块的基础上进一步组织JavaScript代码。&lt;/p></description></item><item><title>node js入门 安装</title><link>https://blog.dfned.com/post/node-js%E5%85%A5%E9%97%A8-%E5%AE%89%E8%A3%85/</link><pubDate>Tue, 26 Jan 2016 11:32:51 +0800</pubDate><guid>https://blog.dfned.com/post/node-js%E5%85%A5%E9%97%A8-%E5%AE%89%E8%A3%85/</guid><description>&lt;h1 id="版本控制">版本控制&lt;/h1>
+&lt;p>由于Node.js版本发布较快，网友称之为“版本帝”，所以一个有效的版本控制管理软件是必不可少的。目前主要的版本控制有nvm和n两种。下面分别介绍：&lt;/p>
+&lt;h2 id="nvmnvmw">nvm&amp;amp;nvmw&lt;/h2>
+&lt;ul>
+&lt;li>nvm &lt;em>Node Version Manager&lt;/em>&lt;/li>
+&lt;li>nvmw是nvm的Windows版本，用于Windows下Node.js版本管理&lt;/li>
+&lt;/ul>
+&lt;p>安装一个nvm&lt;a href="https://github.com/creationix/nvm">https://github.com/creationix/nvm&lt;/a>&lt;/p></description></item></channel></rss>
