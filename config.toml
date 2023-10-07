@@ -54,12 +54,6 @@ paginate = 7
     weight = 5
     identifier = "about"
     url = "/about/"
-  [[menu.main]]
-    name = "Contact"
-    pre = "<i class='fa fa-phone-square fa-fw'></i>"
-    weight = 6
-    identifier = "contact"
-    url = "/contact/"
 
 [social]
   # Link your social networking accouns to the side menu
