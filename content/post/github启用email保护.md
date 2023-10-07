@@ -10,6 +10,8 @@ topics: ["杂项"]
 
 在[github settings](https://github.com/settings/emails)中可以开启 `Keep my email addresses private` 和 `Block command line pushes that expose my email` 两个选项
 
+<!--more-->
+
 如果此时使用使用命令push代码时会收到以下报错：
 ```bash
 remote: error: GH007: Your push would publish a private email address.
