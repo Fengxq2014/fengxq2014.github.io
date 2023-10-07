@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Node.js on DefNed Blog</title><link>https://blog.dfned.com/topics/node.js/</link><description>Recent content in Node.js on DefNed Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>&amp;copy; 2016. All rights reserved.</copyright><lastBuildDate>Mon, 25 Apr 2016 17:39:54 +0800</lastBuildDate><atom:link href="https://blog.dfned.com/topics/node.js/index.xml" rel="self" type="application/rss+xml"/><item><title>Node入门</title><link>https://blog.dfned.com/post/node%E5%85%A5%E9%97%A8/</link><pubDate>Mon, 25 Apr 2016 17:39:54 +0800</pubDate><guid>https://blog.dfned.com/post/node%E5%85%A5%E9%97%A8/</guid><description>&lt;p>&lt;em>“这是我读过最好的教程之一此前我作为一名java程序员，我总觉得JavaScript像妖术，但在这教程中，你真的把它讲的浅显易懂”&lt;/em>&lt;/p>
+&lt;p>&lt;em>“我真的忍不住感谢你这么好的node入门教程，内容非常精彩”&lt;/em>&lt;/p>
+&lt;p>&lt;em>“这是我为数不多认真读完的入门教程，只因为写的太好了”&lt;/em>&lt;/p>
+&lt;p>购买“Node入门”中文版电子书&amp;mdash;&amp;ndash;&amp;gt;&lt;a href="http://www.nodebeginner.org/buy-chinese/">立即购买&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>作者： &lt;a href="http://twitter.com/manuelkiessling">Manuel Kiessling&lt;/a>
+翻译： &lt;a href="http://weibo.com/goddyzhao">goddyzhao&lt;/a> &amp;amp; &lt;a href="http://www.otakustay.com/">GrayZhang&lt;/a> &amp;amp; &lt;a href="http://weibo.com/cmonday">MondayChen&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;/blockquote></description></item><item><title>Node js入门 NPM与包</title><link>https://blog.dfned.com/post/node-js%E5%85%A5%E9%97%A8-npm%E4%B8%8E%E5%8C%85/</link><pubDate>Tue, 29 Mar 2016 11:09:45 +0800</pubDate><guid>https://blog.dfned.com/post/node-js%E5%85%A5%E9%97%A8-npm%E4%B8%8E%E5%8C%85/</guid><description>&lt;p>Node.js组织了自身的核心模块，也使得第三方文件模块可以有序的编写和使用。但是第三方模块中，模块与模块之间仍然是散列在各地的，互相之间不能直接引用。而在模块之外，包和NPM则是将模块联系起来的一种机制。&lt;/p>
+&lt;p>在介绍NPM之前，不得不提起CommonJs的包规范。JavaScript不似Java或者其他语言那样，具有模块和包机构。Node.js对模块规范的实现，一定程度上解决了变量依赖、依赖关系等代码组织性问题。包的出现，则是在模块的基础上进一步组织JavaScript代码。&lt;/p></description></item><item><title>node js入门 安装</title><link>https://blog.dfned.com/post/node-js%E5%85%A5%E9%97%A8-%E5%AE%89%E8%A3%85/</link><pubDate>Tue, 26 Jan 2016 11:32:51 +0800</pubDate><guid>https://blog.dfned.com/post/node-js%E5%85%A5%E9%97%A8-%E5%AE%89%E8%A3%85/</guid><description>&lt;h1 id="版本控制">版本控制&lt;/h1>
+&lt;p>由于Node.js版本发布较快，网友称之为“版本帝”，所以一个有效的版本控制管理软件是必不可少的。目前主要的版本控制有nvm和n两种。下面分别介绍：&lt;/p>
+&lt;h2 id="nvmnvmw">nvm&amp;amp;nvmw&lt;/h2>
+&lt;ul>
+&lt;li>nvm &lt;em>Node Version Manager&lt;/em>&lt;/li>
+&lt;li>nvmw是nvm的Windows版本，用于Windows下Node.js版本管理&lt;/li>
+&lt;/ul>
+&lt;p>安装一个nvm&lt;a href="https://github.com/creationix/nvm">https://github.com/creationix/nvm&lt;/a>&lt;/p></description></item></channel></rss>
